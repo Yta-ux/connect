@@ -7,6 +7,9 @@ export async function getRanking() {
   const ranking = await redis.zrevrange('referral:ranking', 0, 2, 'WITHSCORES')
   const subscriberIdAndScore: Record<string, number> = {}
 
+  const ping = await redis.ping()
+
+  console.log(ping)
   for (let i = 0; i < ranking.length; i += 2) {
     subscriberIdAndScore[ranking[i]] = Number.parseInt(ranking[i + 1])
   }
