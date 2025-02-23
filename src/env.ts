@@ -2,7 +2,7 @@ import { z } from 'zod'
 
 const envSchema = z.object({
   PORT: z.coerce.number().default(3333),
-  POSTGRES_URL: z.string().url(),
+  DATABASE_URL: z.string().url(),
   REDIS_URL: z.string().url(),
   REFERRAL_URL: z.string().url(),
 })
