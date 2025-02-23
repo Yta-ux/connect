@@ -6,7 +6,7 @@
     "dev": "tsx watch --env-file=.env src/server",
     "build": "tsup-node",
     "migrate": "drizzle-kit migrate",
-    "start": "npm run migrate && node dist/server.mjs",
+    "start": "node dist/server.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
